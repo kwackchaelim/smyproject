@@ -46,7 +46,7 @@
 
  			pageContext.forward("smyboard_control.jsp?action=list");
  		} else {
- 			throw new Exception("DB insert err ");
+ 			throw new Exception("DB 입력오류");
  		}
 
  	} else if (action.equals("list")) {
@@ -68,7 +68,7 @@
 
  			pageContext.forward("smyboard_control.jsp?action=list");
  		} else {
- 			throw new Exception("DB update err");
+ 			throw new Exception("DB 수정오류");
  		}
 
  	} else if (action.equals("delete")) {
@@ -77,7 +77,7 @@
 
  			pageContext.forward("smyboard_control.jsp?action=list");
  		} else {
- 			throw new Exception("DB delete err");
+ 			throw new Exception("DB 삭제오류");
  		}
 
  	} else {
