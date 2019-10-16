@@ -19,3 +19,5 @@ C:\Users\seols\Desktop\board\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsear
 \smyboarddemo\src
 C:\Users\seols\Desktop\board\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\689344419.index
 \board\src
+C:\Users\seols\Desktop\smyproject\board\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1418077980.index
+\smyboarddemo\src

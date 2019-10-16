@@ -81,7 +81,7 @@
  		}
 
  	} else {
- 		out.println("<script>alert('DBerr')</script>");
+ 		out.println("<script>alert('Dberr')</script>");
  	}
  %> 
  

@@ -131,7 +131,7 @@
 		
 		<table>
 			<tr>
-				<th>작성자</th>
+				<th>성명</th>
 				<td><input type=text size=20 name=userName value="<%= smyboardDTO.getUserName() %>"></td>
 			</tr>
 			<tr>
