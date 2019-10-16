@@ -1,4 +1,4 @@
-drop table Board;
+﻿drop table Board;
 
 create table Board (
 	id int not null auto_increment,
@@ -8,7 +8,7 @@ create table Board (
 	primary key (id)
 ) charset=utf8;
 
-insert into Board(userName, title, content) values ('작성자', '제목', '내용');  
+insert into Board(userName, title, content) values ('설설', '게시판 테스트', '게시판 내용 테스트 ');  
 
 
 select * from Board;
