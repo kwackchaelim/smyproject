@@ -1,0 +1,99 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%@ page import = "org.smy.board.*" %>
+<%@ page import = "java.util.ArrayList" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>게시판 조회</title>
+	<link rel="stylesheet" href="smyboard.css" type="text/css" media="screen" />
+
+	<script type="text/javascript">
+	/**
+	* @fn		retrivalcheck()
+	*
+	* @brief 	Click action control 전달을 위한 선언
+	*
+	* @author 	김설규
+	* @date 	2019-10-16
+	*
+	* @param 	list
+	*
+	* @remark 	Click action control 전달을 위한 선언	[2019-10-16; 김설규]
+	* 
+	*/
+		function retrivalcheck() {
+			
+			document.form1.action.value="list";
+			document.form1.submit();
+		}
+		/**
+		* @fn		editcheck(id)
+		*
+		* @brief 	Click action control 전달을 위한 선언
+		*
+		* @author 	김설규
+		* @date 	2019-10-16
+		*
+		* @param 	edit
+		*
+		* @remark 	Click action control 전달을 위한 선언	[2019-10-16; 김설규]
+		* 
+		*/
+		function editcheck(id) {
+		
+			document.form1.action.value="edit";
+			document.form1.id.value=id;
+			document.form1.submit();
+		}
+	</script>
+</head>
+
+<jsp:useBean id="boardList" scope="request" class="java.util.ArrayList" />
+
+<body>
+	<div align=center>
+	<H3>게시판 조회</H3>
+	<HR>
+	<a href="smyboard_control.jsp?action=add">게시판 등록</a><BR>
+	
+	<form name="form1" method="post" action="smyboard_control.jsp">
+		<input type="hidden" name="action" value="list">
+		<input type="hidden" name="id" value=0>
+	
+		<table border=1>
+			<tr>
+				<td colspan=4 align=right>
+    				<input type="button" value="조회" onClick="retrivalcheck()">
+				</td>
+			</tr>
+			<tr>
+				<th>ID</th>
+				<th>성명</th>
+				<th>제목</th>
+				<th>내용</th>
+			</tr>
+			<%
+				if(boardList != null) {
+					
+						for(smyboardDTO smyboardDTO : (ArrayList<smyboardDTO>) boardList) {
+			%>
+						<tr>
+							<td><a href="javascript:editcheck(<%=smyboardDTO.getId() %>)"><%=smyboardDTO.getId() %></a></td>
+							<td><%=smyboardDTO.getUserName() %></td>
+							<td><%=smyboardDTO.getTitle() %></td>
+							<td><%=smyboardDTO.getContent() %></td>
+						</tr>
+			<%	
+					}
+				}
+			%>
+			</table>
+		</form>
+	</div>
+</body>
+
+</html>
