@@ -1,50 +1,88 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
 <html>
-
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>게시판 등록</title>
+	<title>게시판 작성</title>
 	<link rel="stylesheet" href="smyboard.css" type="text/css" media="screen" />
-
 	<script type="text/javascript">
-
+	/**
+	* @fn		window.onload = function()
+	*
+	* @brief 	페이지 로딩 후 실행 위한 선언
+	*
+	* @author 	김설규
+	* @date 	2019-10-16
+	*
+	* @param 	action
+	*
+	* @remark 	페이지 로딩 후 실행 위한 선언	[2019-10-16; 김설규]
+	* 
+	*/
 		// window.load는 페이지 로딩 후 실행
 		window.onload = function() {
 			var action = document.form1.action.value;
 
 			if(action=="edit") {
 				document.getElementById("insert").disabled=true;
-				// document.getElementById("update").disabled=false;
-				// document.getElementById("delete").disabled=false;
 			} else if(action=="add") {
-				// document.getElementById("insert").disabled=false;
 				document.getElementById("update").disabled=true;
 				document.getElementById("delete").disabled=true;
 			}
 		} 
-	
+		/**
+		* @fn		insertcheck()
+		*
+		* @brief 	Click action control 전달을 위한 선언
+		*
+		* @author 	김설규
+		* @date 	2019-10-16
+		*
+		* @param 	insert
+		*
+		* @remark 	Click action control 전달을 위한 선언	[2019-10-16; 김설규]
+		* 
+		*/
 		function insertcheck() {
-			// post방식
 			document.form1.action.value="insert";
 			document.form1.submit();
 		}
-	
+		/**
+		* @fn		updatecheck()
+		*
+		* @brief 	Click action control 전달을 위한 선언
+		*
+		* @author 	김설규
+		* @date 	2019-10-16
+		*
+		* @param 	update
+		*
+		* @remark 	Click action control 전달을 위한 선언	[2019-10-16; 김설규]
+		* 
+		*/
 		function updatecheck() {
-			// post방식
 			document.form1.action.value="update";
 			document.form1.submit();
 		}
-	
+		/**
+		* @fn		deletecheck()
+		*
+		* @brief 	Click action control 전달을 위한 선언
+		*
+		* @author 	김설규
+		* @date 	2019-10-16
+		*
+		* @param 	delete
+		*
+		* @remark 	Click action control 전달을 위한 선언	[2019-10-16; 김설규]
+		* 
+		*/
 		function deletecheck() {
 			result = confirm("정말로 삭제하시겠습니까 ?");
-		
+	
 			if(result == true){
 				
-				// post방식
 				document.form1.action.value="delete";
 				document.form1.submit();
 			}
@@ -54,39 +92,43 @@
 	</script>
 
 </head>
-
-<%-- 자바빈즈 사용 --%>   
+  
 <jsp:useBean id="smyboardDTO" scope="request" class="org.smy.board.smyboardDTO"></jsp:useBean>
 
 <body>
 	<div align="center">
-	<H2>게시판 등록</H2>
+	<H2>게시판 작성</H2>
 	<HR>
 	
-	<a href="board_control.jsp?action=list">게시판목록 조회</a>
-	
-	<!-- 게시판 등록용 -->
+	<a href="smyboard_control.jsp?action=list">게시판목록 조회</a>
 	<form name="form1" method="post" action=smyboard_control.jsp>
-	
 		<%
-
-			// action구분 등 파라메터(add 또는 edit)
+		/**
+		*
+		* @brief 	action구분  위한 선언
+		*
+		* @author 	김설규
+		* @date 	2019-10-16
+		*
+		* @param 	add, edit
+		*
+		* @remark 	action구분  위한 선언	[2019-10-16; 김설규]
+		* 
+		*/
 			String action = request.getParameter("action");
 			
-			// action이 add이면 값 초기화
 			if(action.equals("add")) {
 				smyboardDTO.setUserName("");
 				smyboardDTO.setTitle("");
 				smyboardDTO.setContent("");
 			}
 		%>
-	
 		<input type="hidden" name="action" value="<%= action %>">
 		<input type="hidden" name="id" value="<%= smyboardDTO.getId() %>">
 		
 		<table>
 			<tr>
-				<th>성명</th>
+				<th>작성자</th>
 				<td><input type=text size=20 name=userName value="<%= smyboardDTO.getUserName() %>"></td>
 			</tr>
 			<tr>
@@ -107,6 +149,5 @@
 		</table>
 	</form>
 	</div>
-
 </body>
 </html>

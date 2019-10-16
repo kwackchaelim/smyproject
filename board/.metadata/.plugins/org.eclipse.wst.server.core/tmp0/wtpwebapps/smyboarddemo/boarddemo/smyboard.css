@@ -1,5 +1,4 @@
 @CHARSET "UTF-8";
-
 table {
 	width: auto;
 	border-collapse: collapse;
@@ -25,17 +24,17 @@ th {
 tr td {
 	border-radius: 2px;
 	color: #000000;
-	background-color: #FFC6C3;
+	background-color: #FFC6C5;
 }
 
 input {
 	border-radius: 2px;
 	height: 25px;
-	width:200px;
+	width:300px;
 }
 
 input[type="submit"],[type="reset"],[type="button"] {
 	border-radius: 2px;
-	height: 25px;
+	height: 30px;
 	width:80px;
 }

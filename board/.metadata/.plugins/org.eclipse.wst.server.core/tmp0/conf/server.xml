@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\seols\Desktop\board\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\seols\Desktop\board\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\board" path="/board" reloadable="true" source="org.eclipse.jst.jee.server:board"/><Context docBase="C:\Users\seols\Desktop\board\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\smyboarddemo" path="/smyboarddemo" reloadable="true" source="org.eclipse.jst.jee.server:smyboarddemo"/></Host>
+      <Context docBase="C:\Users\seols\Desktop\smyproject\board\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\seols\Desktop\smyproject\board\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\smyboarddemo" path="/smyboarddemo" reloadable="true" source="org.eclipse.jst.jee.server:smyboarddemo"/></Host>
     </Engine>
   </Service>
 </Server>

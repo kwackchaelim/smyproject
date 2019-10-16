@@ -100,7 +100,7 @@
 	<H2>게시판 작성</H2>
 	<HR>
 	
-	<a href="smyboard_control.jsp?action=list">게시판목록 조회</a>
+	<a href="board_control.jsp?action=list">게시판목록 조회</a>
 	<form name="form1" method="post" action=smyboard_control.jsp>
 		<%
 		/**
