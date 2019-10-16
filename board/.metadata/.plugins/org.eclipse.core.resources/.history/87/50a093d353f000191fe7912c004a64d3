@@ -13,6 +13,7 @@ public class smyboardDAO {
 	String jdbc_driver = "com.mysql.jdbc.Driver";
 	
 	String jdbc_url = "jdbc:mysql://127.0.0.1/jspdb?useSSL=true&verifyServerCertificate=false&serverTimezone=UTC";
+	
 	/**
 	 *
 	 * @fn 		connect()

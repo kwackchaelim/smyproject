@@ -92,7 +92,7 @@
  		*
  		* @param 	update
  		*
- 		* @remark 	 페이지를 이동 바뀐 값  전달 [2019-10-16; 김설규]
+ 		* @remark 	값을 호출하고 객체를 생성해 담아 페이지를 이동하여 전달	[2019-10-16; 김설규]
  		* 
  		*/ 
  	} else if (action.equals("update")) {
@@ -112,7 +112,7 @@
  		*
  		* @param 	delete
  		*
- 		* @remark 	페이지를 이동 바뀐 값  전달	[2019-10-16; 김설규]
+ 		* @remark 	 페이지를 이동	[2019-10-16; 김설규]
  		* 
  		*/ 
  	} else if (action.equals("delete")) {
