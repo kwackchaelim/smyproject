@@ -25,17 +25,17 @@ th {
 tr td {
 	border-radius: 2px;
 	color: #000000;
-	background-color: #FFC6C5;
+	background-color: #FFC6C3;
 }
 
 input {
 	border-radius: 2px;
 	height: 25px;
-	width:300px;
+	width:200px;
 }
 
 input[type="submit"],[type="reset"],[type="button"] {
 	border-radius: 2px;
-	height: 30px;
+	height: 25px;
 	width:80px;
 }

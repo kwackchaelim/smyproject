@@ -11,7 +11,7 @@ td,th {
 	font-size: 10pt;
 	border: 1px solid #FF9E9B;
 	border-radius: 2px;
-	height: 30px;
+	height: 35px;
 	padding: 5px;
 }
 
@@ -31,7 +31,7 @@ tr td {
 input {
 	border-radius: 2px;
 	height: 25px;
-	width:300px;
+	width:200px;
 }
 
 input[type="submit"],[type="reset"],[type="button"] {
