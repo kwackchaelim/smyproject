@@ -4,7 +4,7 @@
 <%@ page import = "org.smy.board.*" %>
 <%@ page import = "java.util.ArrayList" %>
  
-<% request.setCharacterEncoding("UTF-8");%>
+<% request.setCharacterEncoding("UTF-8"); %>
  
 <jsp:useBean id="smyboardDTO" class="org.smy.board.smyboardDTO" scope="request" ></jsp:useBean>
 <jsp:setProperty property="*" name="smyboardDTO"/> 
