@@ -9,6 +9,7 @@
 <jsp:useBean id="smyboardDTO" class="org.smy.board.smyboardDTO" scope="request" ></jsp:useBean>
 <jsp:setProperty property="*" name="smyboardDTO"/> 
 <jsp:useBean id="smyboardDAO" class="org.smy.board.smyboardDAO" scope="request" ></jsp:useBean>
+ 
 <%
 /**
 *
